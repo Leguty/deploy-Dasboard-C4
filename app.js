@@ -1,4 +1,4 @@
-import express from "express";
+import express from './node_modules/express'
 //import {router} from './routes/routes.js'
 
 const router = express.Router();
@@ -15,7 +15,7 @@ router.get('/', (req,res) => {
 } )
 
 //busca el puerto 8000 si esta disponible si no ubica ot puerto 
-var PUERTO = process.env.PORT || 8000;
+var PUERTO = process.env.PUERTO || 8000;
 app.listen(PUERTO,() =>{
     console.log(`Se conecto al servidor http://localhost:${PUERTO}`)
 })
