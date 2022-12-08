@@ -1,4 +1,4 @@
-import express from './node_modules/express'
+import express from 'express';
 //import {router} from './routes/routes.js'
 
 const router = express.Router();
