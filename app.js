@@ -15,8 +15,8 @@ router.get('/', (req,res) => {
 } )
 
 //busca el puerto 8000 si esta disponible si no ubica ot puerto 
-var PUERTO = process.env.PUERTO || 8000;
-app.listen(PUERTO,() =>{
-    console.log(`Se conecto al servidor http://localhost:${PUERTO}`)
+var PORT= process.env.PORT || 8000;
+app.listen(PORT,() =>{
+    console.log(`Se conecto al servidor http://localhost:${PORT}`)
 })
 
