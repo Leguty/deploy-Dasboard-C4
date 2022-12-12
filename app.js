@@ -1,18 +1,21 @@
 import express from 'express';
-import { db } from './basedatos.js'
-//import {router} from './routes/routes.js'
+//import { db } from './basedatos.js'
+//import {shevento} from './contevento.js'
+import {router} from './routes/routes.js'
 
-const router = express.Router();
 
 //Se importa un pequeño servidor de express
 const app=express();
 
 app.use('/', router);
-app.use(express.json)
+app.use(express.json())
+app.use('/',router);
+
+//router.get('./',shevento);
 
 //Se usa la constante router creadas
 router.get('/', (req,res) => {
-    res.send("Hello World from UNAB")
+    res.send("Deploy en Heroku de nuestro Backend ")
 
 } )
 
