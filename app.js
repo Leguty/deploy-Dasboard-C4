@@ -1,5 +1,5 @@
 import express from 'express';
-
+import { db } from './basedatos.js'
 //import {router} from './routes/routes.js'
 
 const router = express.Router();
