@@ -1,9 +1,9 @@
 import bcrypt from 'bcrypt';
 import usuario from '../models/usuario.js';
-import {generateToken} from '../configs/jwtfunciones.js'
+//import {generateToken} from '../configs/jwtfunciones.js'
 import dotenv from "dotenv";
 dotenv.config();
-import jwt from 'jsonwebtoken';
+//import jwt from 'jsonwebtoken';
 
 //El async nos permite que se puedan conectar de manera sincrinica varias personas al servidor 
 //Sin el async solo se podria conectar una persona

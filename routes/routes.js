@@ -10,9 +10,10 @@ import {regusuario, showuser, showoneuser,upuser,deluser} from '../controllers/u
 
 //Importamos el contralador de eventos 
 import {regevento, sheventos, shevent, delevent,upevent} from '../controllers/ceventoscontrollers.js';
-//import { Login } from '../controllers/logincontrollers.js';
+import { Login } from '../controllers/logincontrollers.js';
 import {db} from '../mongodb.js';
-//import {requireToken} from '../midleware/auth.js'
+
+ 
 
 //import mongoose from 'mongoose';
 export const router= express.Router();
@@ -20,11 +21,12 @@ export const router= express.Router();
 //Con esta linea estamos llamando la constante router 
 //app.use(router);
 
+
 //Se van a definir las rutas  req=requerimiento, res=respuesta
-router.get('/', (req,res)=> {
+/*router.get('/', (req,res)=> {
     res.send('Bienvenidos a NodeJs desde la Raiz');
     console.log("Conected to ", db.connection.name);
-})
+})*/
 
 //Para solicitar al usuario el ingreso de loggin y password  Ruta de login
 router.get('/login',(req,res)=>{
@@ -34,15 +36,14 @@ router.get('/login',(req,res)=>{
 
 //Rutas para mis eventos deportivos 
 router.post('/regevento', regevento);
-router.get ('/sheventos', sheventos);
+router.get ('/sheventos',sheventos);
 router.get('/shevent/:id', shevent);
 router.delete('/delevent/:id',delevent);
 router.put('/upevent/:id',upevent);
 
 
 //Rutas del usuario
-
-//router.post('/login', Login);
+router.post('/login', Login);
 router.post('/reguser', regusuario);
 router.get('/shuser',showuser);
 router.get('/shuser/:id',showoneuser);
