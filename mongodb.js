@@ -2,7 +2,6 @@
 //Seguridad de los datos en este caso el usuario y contraseña. 
 
 import mongoose from "mongoose";
-mongoose.set('strictQuery', true);
 
 //Se importa la dependencia dotenv
 import dotenv from "dotenv";

@@ -2,6 +2,7 @@ import express from 'express';
 //import { db } from './basedatos.js'
 //import {shevento} from './contevento.js'
 import {router} from './routes/routes.js'
+import cors from 'cors'
 
 
 //Se importa un pequeño servidor de express
